@@ -1,0 +1,24 @@
+# Compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entornos virtuales
+venv/
+.env
+
+# Archivos de configuración local
+*.env
+*.ini
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# Carpetas
+json/
+
+# Archivos especificos
+*.js

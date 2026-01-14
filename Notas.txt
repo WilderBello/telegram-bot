@@ -1,0 +1,34 @@
+# Obtener requirements
+pipenv run pip freeze > requirements.txt
+
+######
+# Ejecutar - Forma 1
+docker build -t mi-bot-telegram .
+docker run --env-file .env -v $(pwd)/json:/app/json mi-bot-telegram
+###### 
+
+#####
+# Ejecutar - Forma 2 (El docker-compose tiene toda la configuracion)
+# Construir imagen
+docker-compose build
+# Ejecutar bot en segundo plano
+docker-compose up -d
+
+# En un solo paso
+docker-compose up -d --build
+#####
+
+####
+# Detener Contenedor
+docker-compose down
+# Eliminar contenedores detenidos
+docker container prune
+# Eliminar imagenes no usadas
+docker image prune -a
+####
+
+# Ver logs
+docker-compose logs -f
+
+# Construir y ver logs en un solo paso
+docker-compose up --build
