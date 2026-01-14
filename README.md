@@ -1,6 +1,5 @@
 # Nota: 
 * Es necesario el entorno pipenv.
-* 
 
 # Ejecución
 * crear la carpeta: `json` e incluir `horarios_base.json`
